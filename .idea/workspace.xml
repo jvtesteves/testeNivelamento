@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bd0043a-be9c-40e1-8559-11d842e6f3e6" name="Changes" comment="Part 1 - web scrapping">
-      <change afterPath="$PROJECT_DIR$/Teste_JoaoVictorTavaresEsteves.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_transformation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rol_de_procedimentos.csv" afterDir="false" />
+    <list default="true" id="7bd0043a-be9c-40e1-8559-11d842e6f3e6" name="Changes" comment="Part 2 - data transformation">
+      <change afterPath="$PROJECT_DIR$/Part 3/csv_standardization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Part 3/csvreader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Part 3/outputs/output_atv_3_a.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Part 3/outputs/output_atv_3_b.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Part 3/queries_parte_3.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="SQL File" />
       </list>
     </option>
   </component>
@@ -48,23 +51,78 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Python.data_transformation.executor&quot;: &quot;Run&quot;,
-    &quot;Python.web_scrapping.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python.csv_standardization.executor": "Run",
+    "Python.csvreader.executor": "Run",
+    "Python.data_transformation.executor": "Run",
+    "Python.ods_reader.executor": "Run",
+    "Python.web_scrapping.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Python.data_transformation">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\joaov\PycharmProjects\testeNivelamento\Part 3\outputs" />
+      <recent name="C:\Users\joaov\PycharmProjects\testeNivelamento\Part 3" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.csvreader">
+    <configuration name="csv_standardization" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="testeNivelamento" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\joaov\PycharmProjects\testeNivelamento\Part 3\csv_standardization.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="csvreader" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="testeNivelamento" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\joaov\PycharmProjects\testeNivelamento\Part 3\csvreader.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="data_transformation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="testeNivelamento" />
       <option name="ENV_FILES" value="" />
@@ -113,6 +171,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.csvreader" />
+        <item itemvalue="Python.csv_standardization" />
         <item itemvalue="Python.data_transformation" />
       </list>
     </recent_temporary>
@@ -136,7 +196,7 @@
       <workItem from="1743218785962" duration="2840000" />
       <workItem from="1743221788374" duration="1147000" />
       <workItem from="1743255134015" duration="57000" />
-      <workItem from="1743255203637" duration="327000" />
+      <workItem from="1743255203637" duration="10886000" />
     </task>
     <task id="LOCAL-00001" summary="Part 1 - web scrapping">
       <option name="closed" value="true" />
@@ -146,7 +206,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743220082139</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Part 2 - data transformation">
+      <option name="closed" value="true" />
+      <created>1743255849425</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1743255849425</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,10 +223,14 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Part 1 - web scrapping" />
-    <option name="LAST_COMMIT_MESSAGE" value="Part 1 - web scrapping" />
+    <MESSAGE value="Part 2 - data transformation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Part 2 - data transformation" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/testeNivelamento$csv_standardization.coverage" NAME="csv_standardization Coverage Results" MODIFIED="1743261171344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/testeNivelamento$data_transformation.coverage" NAME="data_transformation Coverage Results" MODIFIED="1743221929577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/testeNivelamento$ods_reader.coverage" NAME="ods_reader Coverage Results" MODIFIED="1743263635642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/testeNivelamento$csvreader.coverage" NAME="csvreader Coverage Results" MODIFIED="1743264151613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/testeNivelamento$web_scrapping.coverage" NAME="web_scrapping Coverage Results" MODIFIED="1743221194338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
