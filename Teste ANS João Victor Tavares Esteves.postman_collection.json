@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "be0bea72-701d-4755-bb4d-cc9ee99b2884",
+		"name": "Teste ANS João Victor Tavares Esteves",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43629085",
+		"_collection_link": "https://cloudy-equinox-1918163.postman.co/workspace/Jo%C3%A3o-Victor-Tavares's-Workspace~1bbc4642-9e7e-4213-8211-d0a57cdf00af/collection/43629085-be0bea72-701d-4755-bb4d-cc9ee99b2884?action=share&source=collection_link&creator=43629085"
+	},
+	"item": [
+		{
+			"name": "unimed",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/buscar-operadoras?query=unimed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"buscar-operadoras"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "unimed"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "amil",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/buscar-operadoras?query=amil",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"buscar-operadoras"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "amil"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bradesco",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/buscar-operadoras?query=bradesco",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"buscar-operadoras"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "bradesco"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "prevent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/buscar-operadoras?query=prevent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"buscar-operadoras"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "prevent"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
