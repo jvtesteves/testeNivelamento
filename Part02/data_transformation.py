@@ -60,7 +60,7 @@ def extrair_tabela_pdfplumber(pdf_path, csv_output, zip_output):
     print(f"ZIP gerado: {zip_output}")
 
 if __name__ == "__main__":
-    pdf_file = "C:/Users/joaov/PycharmProjects/testeNivelamento/anexos/AnexoI.pdf"  # Caminho do nosso Anexo1
+    pdf_file = "../Part01/anexos/AnexoI.pdf"  # Caminho do nosso Anexo1
     csv_name = "rol_de_procedimentos.csv"
     zip_name = "Teste_JoaoVictorTavaresEsteves.zip"
 
