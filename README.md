@@ -35,7 +35,12 @@ testeNivelamento/
 │   └── Teste_JoaoVictorTavaresEsteves.zip
 │
 ├── Part_03/           # Banco de dados PostgreSQL (via pgAdmin)
-│   └── consultas_postgresql.sql
+│   ├── csv_standardization.py
+│   ├── csvreader.py
+│   ├── queries_parte_3.sql
+│   └── outputs/
+│       ├── output_atv_3_a.csv
+│       └── output_atv_3_b.csv
 │
 ├── Part_04/           # Backend Flask + Frontend Vue.js
 │   ├── backend/
@@ -97,19 +102,15 @@ python data_transformation.py
 ## 🐘 Atividade 3 — Análise com PostgreSQL (pgAdmin)
 
 ### Objetivo:
-Realizar análises SQL sobre os dados contábeis e operacionais das operadoras de saúde.
+Padronizar e analisar dados contábeis e cadastrais das operadoras da ANS.
 
-### Ações realizadas:
-1. Criação de tabelas:
-   - `demonstracoes_contabeis`
-   - `operadoras_ativas`
-2. Carga de dados usando `COPY` com os arquivos da ANS
-3. Consultas SQL para:
-   - Top 10 operadoras com maiores despesas em 2024
-   - Comparativo entre trimestres de 2023 e 2024
+📁 Local: `Part_03`
 
-📄 Scripts disponíveis em:  
-`Part_03/consultas_postgresql.sql`
+### Componentes:
+- `csv_standardization.py` → padroniza arquivos da ANS
+- `csvreader.py` → exibe amostras dos arquivos padronizados
+- `queries_parte_3.sql` → consultas SQL para análise no pgAdmin
+- `outputs/` → contém os resultados salvos em CSV das queries
 
 ---
 
@@ -163,8 +164,7 @@ npm run serve
 ## 📬 Postman
 
 Uma coleção com testes GET pode ser utilizada para validar a API Flask (buscas com diferentes termos).
-
-> Caso queira exportar essa coleção: use a aba "Collections" do Postman e salve como `TesteANS_JoaoVictor.postman_collection.json`.
+Teste ANS João Victor Tavares Esteves.postman_collection.json
 
 ---
 
