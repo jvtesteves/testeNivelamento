@@ -50,7 +50,7 @@ testeNivelamento/
 │       ├── src/
 │       │   └── App.vue (customizado)
 │       └── ...
-│
+│   ├── Teste ANS João Victor Tavares Esteves.postman_collection.json 
 └── README.md
 ```
 
