@@ -163,8 +163,7 @@ npm run serve
 
 ## 📬 Postman
 
-Uma coleção com testes GET pode ser utilizada para validar a API Flask (buscas com diferentes termos).
-Teste ANS João Victor Tavares Esteves.postman_collection.json
+`Teste ANS João Victor Tavares Esteves.postman_collection.json`
 
 ---
 
