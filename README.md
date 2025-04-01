@@ -14,7 +14,7 @@ Este repositório contém a implementação das quatro atividades propostas no T
 - Vue.js 3
 - Axios
 - Postman
-- PyCharm / VSCode
+- PyCharm
 
 ---
 
