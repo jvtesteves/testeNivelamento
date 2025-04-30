@@ -1,6 +1,6 @@
-# Teste de Nivelamento - João Victor Tavares Esteves
+# Projeto de Processamento e Visualização de Dados da ANS
 
-Este repositório contém a implementação das quatro atividades propostas no Teste de Nivelamento, utilizando dados públicos da ANS (Agência Nacional de Saúde Suplementar). O projeto cobre desde coleta e transformação de dados até visualização web por meio de API e frontend Vue.js.
+Este repositório contém um projeto completo envolvendo coleta, transformação, armazenamento e visualização de dados públicos da ANS (Agência Nacional de Saúde Suplementar), utilizando Python, Flask, PostgreSQL e Vue.js. O projeto demonstra um fluxo de trabalho desde a obtenção dos dados brutos até a apresentação interativa via web.
 
 ---
 
@@ -21,28 +21,28 @@ Este repositório contém a implementação das quatro atividades propostas no T
 ## 📂 Estrutura do Projeto
 
 ```
-testeNivelamento/
-├── Part_01/           # Download automático dos anexos ANS
+ans_data_project/  # Nome sugerido para o diretório raiz
+├── Part_01_Coleta/
 │   ├── web_scrapping.py
 │   ├── anexos/
 │   │   ├── AnexoI.pdf
 │   │   └── AnexoII.pdf
 │   └── anexos.zip
 │
-├── Part_02/           # Extração do Anexo I PDF → CSV + ZIP
+├── Part_02_Extracao/
 │   ├── data_transformation.py
 │   ├── rol_de_procedimentos.csv
-│   └── Teste_JoaoVictorTavaresEsteves.zip
+│   └── AnexoI_Processado.zip # Ex: Nome genérico para o zip de saída
 │
-├── Part_03/           # Banco de dados PostgreSQL (via pgAdmin)
+├── Part_03_AnaliseDB/
 │   ├── csv_standardization.py
 │   ├── csvreader.py
-│   ├── queries_parte_3.sql
+│   ├── queries_ans.sql       # Ex: Nome genérico para as queries
 │   └── outputs/
-│       ├── output_atv_3_a.csv
-│       └── output_atv_3_b.csv
+│       ├── output_query_a.csv # Ex: Nomes genéricos para os outputs
+│       └── output_query_b.csv
 │
-├── Part_04/           # Backend Flask + Frontend Vue.js
+├── Part_04_API_Frontend/
 │   ├── backend/
 │   │   ├── main.py
 │   │   └── Relatorio_cadop.csv
@@ -50,125 +50,118 @@ testeNivelamento/
 │       ├── src/
 │       │   └── App.vue (customizado)
 │       └── ...
-│   ├── Teste ANS João Victor Tavares Esteves.postman_collection.json 
+│   # A coleção Postman está disponível no repositório para testes da API.
 └── README.md
 ```
+*(Nota: Os nomes de diretórios e alguns arquivos na estrutura acima são sugestões para desvincular do contexto de "teste". Se você alterar os nomes no seu repositório, lembre-se de ajustar os caminhos nos scripts e comandos.)*
 
 ---
 
-## 📌 Atividade 1 — Download dos Anexos da ANS
+## 📌 Parte 1 — Coleta de Dados ANS
 
 ### Objetivo:
 Automatizar o download dos Anexos I e II disponibilizados pela ANS e armazená-los de forma organizada.
 
-📄 Arquivo principal:  
-`Part_01/web_scrapping.py`
+📄 Arquivo principal:
+`Part_01_Coleta/web_scrapping.py`
 
 ### O que faz:
-- Baixa os PDFs dos Anexos I e II
-- Salva os arquivos em `Part_01/anexos/`
-- Compacta a pasta inteira no arquivo `anexos.zip`
+- Baixa os PDFs dos Anexos I e II.
+- Salva os arquivos em `Part_01_Coleta/anexos/`.
+- Compacta a pasta `anexos` no arquivo `anexos.zip`.
 
 ### Como executar:
 ```bash
-cd Part_01
+cd Part_01_Coleta
 pip install requests
 python web_scrapping.py
 ```
 
 ---
 
-## 🧾 Atividade 2 — Processamento de dados PDF
+## 🧾 Parte 2 — Extração PDF para CSV
 
 ### Objetivo:
-Extrair a tabela principal do Anexo I (PDF) e transformá-la em um arquivo CSV, posteriormente compactado.
+Extrair a tabela principal do Anexo I (PDF) e transformá-la em um arquivo CSV estruturado, posteriormente compactado.
 
-📄 Arquivo principal:  
-`Part_02/data_transformation.py`
+📄 Arquivo principal:
+`Part_02_Extracao/data_transformation.py`
 
 ### Como executar:
 ```bash
-cd Part_02
+cd Part_02_Extracao
 pip install pdfplumber pandas
 python data_transformation.py
 ```
 
 ### Resultado:
 - `rol_de_procedimentos.csv`
-- `Teste_JoaoVictorTavaresEsteves.zip`
+- `AnexoI_Processado.zip` (Nome do ZIP alterado para exemplo genérico)
 
 ---
 
-## 🐘 Atividade 3 — Análise com PostgreSQL (pgAdmin)
+## 🐘 Parte 3 — Análise com PostgreSQL
 
 ### Objetivo:
-Padronizar e analisar dados contábeis e cadastrais das operadoras da ANS.
+Padronizar, carregar no PostgreSQL e analisar dados contábeis e cadastrais das operadoras da ANS utilizando SQL.
 
-📁 Local: `Part_03`
+📁 Local: `Part_03_AnaliseDB`
 
 ### Componentes:
-- `csv_standardization.py` → padroniza arquivos da ANS
-- `csvreader.py` → exibe amostras dos arquivos padronizados
-- `queries_parte_3.sql` → consultas SQL para análise no pgAdmin
-- `outputs/` → contém os resultados salvos em CSV das queries
+- `csv_standardization.py`: Padroniza arquivos CSV da ANS antes da carga.
+- `csvreader.py`: Permite visualizar amostras dos arquivos padronizados.
+- `queries_ans.sql`: Contém as consultas SQL para análise (executadas via pgAdmin ou cliente SQL).
+- `outputs/`: Armazena os resultados das consultas exportados em CSV.
 
 ---
 
-## 🌐 Atividade 4 — Consulta interativa com Flask + Vue.js
+## 🌐 Parte 4 — API Flask + Frontend Vue.js
 
 ### Objetivo:
-Desenvolver uma API Flask para busca textual em dados de operadoras ANS, e um frontend Vue.js para interação.
+Desenvolver uma API RESTful (Flask) para busca textual em dados de operadoras ANS e um frontend interativo (Vue.js) para consumir essa API e visualizar os resultados.
 
 ---
 
 ### 🖥️ Backend (Flask)
 
-📁 Local: `Part_04/backend`
+📁 Local: `Part_04_API_Frontend/backend`
 
-📄 Arquivo principal: `main.py`  
+📄 Arquivo principal: `main.py`
 📄 Dados utilizados: `Relatorio_cadop.csv`
 
 ### Como executar:
 ```bash
-cd Part_04/backend
+cd Part_04_API_Frontend/backend
 pip install flask flask-cors pandas
 python main.py
 ```
-
-- API rodando em: `http://localhost:5000`
-- Endpoint de busca:  
-  ```
-  GET /buscar-operadoras?query=unimed
-  ```
+- A API estará disponível em: `http://localhost:5000`
+- Exemplo de endpoint de busca: `GET /buscar-operadoras?query=unimed`
 
 ---
 
 ### 🌍 Frontend (Vue.js)
 
-📁 Local: `Part_04/frontend`
+📁 Local: `Part_04_API_Frontend/frontend`
 
 ### Como iniciar:
 ```bash
-cd Part_04/frontend
+cd Part_04_API_Frontend/frontend
 npm install
 npm run serve
 ```
-
-- Acesse: [http://localhost:8080](http://localhost:8080)
-- Interface com:
-  - Campo de busca por nome, CNPJ ou registro ANS
-  - Lista dos 10 primeiros resultados (Nome Fantasia, Razão Social, UF, etc)
+- Aplicação acessível em: `http://localhost:8080`
+- A interface permite a busca por nome, CNPJ ou registro ANS e exibe uma lista paginada dos resultados.
 
 ---
+## 📬 Testes de API (Postman)
 
-## 📬 Postman
-
-`Teste ANS João Victor Tavares Esteves.postman_collection.json`
+Uma coleção Postman (`*.postman_collection.json`) está incluída no repositório para facilitar os testes dos endpoints da API Flask.
 
 ---
 
 ## ✍️ Autor
 
-**João Victor Tavares Esteves**  
-Engenharia de Computação – Universidade Federal do Ceará  
+**João Victor Tavares Esteves**
+Engenharia de Computação – Universidade Federal do Ceará
 📎 [www.linkedin.com/in/joaovtesteves](https://www.linkedin.com/in/joaovtesteves)
